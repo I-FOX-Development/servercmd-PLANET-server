@@ -10,7 +10,7 @@ const server = net.createServer((socket) => {
     console.log(`Client connected: ${socket.remoteAddress}:${socket.remotePort}`);
 
     // Spawn a new CMD process for this client
-    const cmdProcess = spawn('cmd.exe');
+    const cmdProcess = spawn('echo welcome to serverCMD');
 
     // Forward data from the client to CMD
     socket.on('data', (data) => {
